@@ -28,7 +28,9 @@ import os
 lfoldext = Extension(
             'linearfold',
             ['linearfoldmodule.cc'],
-            include_dirs=['LinearFold/src'])
+            include_dirs=['LinearFold/src'],
+            extra_compile_args=['-std=c++11'],
+        )
 
 if not os.path.exists('LinearFold/src/LinearFold.cpp'):
     print('''
